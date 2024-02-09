@@ -1,7 +1,7 @@
 sudo su
 apt install fail2ban python3-ipynotify
 cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
-sed -i 's/bantime  = 10m/bantime  = 1d/'
+sed -i 's/bantime  = 10m/bantime  = 1d/' /etc/fail2ban/jail.local
 vi /etc/fail2ban/jail.local
 systemctl start fail2ban
 systemctl enable fail2ban
